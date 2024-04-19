@@ -1,0 +1,98 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: serif, Arial;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #c8c8a9;
+  color: #1c140d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body button {
+  cursor: pointer;
+}
+
+#app {
+  padding: 10px;
+  width: 600px;
+  min-width: 300px;
+  text-align: center;
+}
+#app #controls {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#app #controls #break-increment, #app #controls #session-increment {
+  font-size: 1.2em;
+  padding: 5px 12px;
+  background-color: #f9cdad;
+}
+#app #controls #break-decrement, #app #controls #session-decrement {
+  font-size: 1.2em;
+  padding: 5px 15px;
+  background-color: #fc9d9a;
+}
+#app #controls p {
+  font-size: 1.5em;
+  padding: 0 30px;
+  display: inline;
+}
+
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#timer {
+  max-height: 100%;
+}
+#timer #clock {
+  border: 2px solid;
+  border-radius: 100px;
+}
+#timer #timer-label {
+  font-size: 2.5em;
+  margin: 5px;
+}
+#timer #time-left {
+  font-size: 5em;
+  margin: 10px;
+}
+#timer #timer-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 10px;
+  gap: 30px;
+}
+#timer #timer-btns button {
+  padding: 5px 10px;
+  font-size: 1em;
+}
+#timer #timer-btns #start_stop {
+  background-color: #f9cdad;
+}
+#timer #timer-btns #reset {
+  background-color: #fc9d9a;
+}
+
+.red-time {
+  color: #fe4365;
+}
+
+.disabled-btn {
+  cursor: not-allowed;
+}

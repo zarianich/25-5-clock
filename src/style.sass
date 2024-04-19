@@ -1,0 +1,95 @@
+$bg-color:  #c8c8a9
+$txt-color: #1c140d
+$btn-color: #fe4365
+$acc-color: #f9cdad
+$acc2-color: #fc9d9a
+
+@mixin center-items
+  display: flex
+  justify-content: center
+  align-items: center
+
+*, *::after, *::before
+  box-sizing: border-box
+
+body
+  font-size: 18px
+  font-family: serif, Arial
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100vh
+  background-color: $bg-color
+  color: $txt-color
+  @include center-items
+    
+body button
+  cursor: pointer
+  
+#app
+  padding: 10px
+  width: 600px
+  min-width: 300px
+  text-align: center
+  
+  #controls
+    padding: 10px
+    width: 100%
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    flex-wrap: wrap
+    
+    #break-increment, #session-increment
+      font-size: 1.2em
+      padding: 5px 12px
+      background-color: $acc-color
+      
+    #break-decrement, #session-decrement
+      font-size: 1.2em
+      padding: 5px 15px
+      background-color: $acc2-color
+    
+    p
+      font-size: 1.5em
+      padding: 0 30px
+      display: inline
+ 
+      
+.center-items
+  @include center-items
+    
+#timer
+  max-height: 100%
+  
+  #clock
+    border: 2px solid
+    border-radius: 100px
+  
+  #timer-label
+    font-size: 2.5em
+    margin: 5px
+    
+  #time-left
+    font-size: 5em
+    margin: 10px
+    
+    
+    
+  #timer-btns 
+    @include center-items
+    padding: 20px 0 10px
+    gap: 30px
+    button
+      padding: 5px 10px
+      font-size: 1em
+    #start_stop
+      background-color: $acc-color
+    #reset
+      background-color: $acc2-color
+  
+.red-time
+  color: $btn-color
+  
+.disabled-btn
+  cursor: not-allowed
